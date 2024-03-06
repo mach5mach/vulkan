@@ -10,5 +10,8 @@ HelloTriangle: main.cpp
 test: HelloTriangle
 	./HelloTriangle.exe
 
+fps: HelloTriangle
+	VK_INSTANCE_LAYERS='VK_LAYER_MESA_overlay' ./HelloTriangle.exe
+
 clean:
 	rm -f HelloTriangle.exe
