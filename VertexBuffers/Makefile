@@ -17,5 +17,9 @@ test: $(TITLE).exe
 fps: $(TITLE).exe
 	VK_INSTANCE_LAYERS='VK_LAYER_MESA_overlay' ./$(TITLE).exe
 
+shaders: shaders/shader.vert shaders/shader.frag
+	glslc ./shaders/shader.vert -o ./shaders/vert.spv
+	glslc ./shaders/shader.frag -o ./shaders/frag.spv
+
 clean:
 	rm -f $(TITLE).exe
