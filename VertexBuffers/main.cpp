@@ -107,7 +107,7 @@ const std::vector<uint16_t> indices = {
     0, 1, 2, 2, 3, 0
 };
 
-class VertexBuffersApplication {
+class UniformBuffersApplication {
 public:
     void run() {
         initWindow();
@@ -182,7 +182,7 @@ private:
     }
 
     static void framebufferResizeCallback(GLFWwindow* window, int width, int height) {
-        auto app = reinterpret_cast<VertexBuffersApplication*>(glfwGetWindowUserPointer(window));
+        auto app = reinterpret_cast<UniformBuffersApplication*>(glfwGetWindowUserPointer(window));
         app->framebufferResized = true;
     }
 
@@ -1188,7 +1188,7 @@ private:
 };
 
 int main() {
-    VertexBuffersApplication app;
+    UniformBuffersApplication app;
 
     try {
         app.run();
